@@ -1,0 +1,60 @@
+% For more details: https://www.sharelatex.com/learn/Beamer
+
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}					% Document class
+
+\usepackage[english]{babel}				% Set language
+\usepackage[utf8x]{inputenc}			% Set encoding
+\usepackage{color}	
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bbm}
+\usepackage{appendixnumberbeamer}
+
+\newcommand{\Ell}{\mathcal{L}}
+\newcommand{\mb}{\mathbf}
+\newcommand{\ind}{\mathbbm{1}}
+\newcommand{\E}{\mathbbm{E}}
+
+\mode<presentation>						% Set options
+{
+  \usetheme{default}					% Set theme
+  \usecolortheme{default} 				% Set colors
+  \usefonttheme{default}  				% Set font theme
+  \setbeamertemplate{caption}[numbered]	% Set caption to be numbered
+  \setbeamertemplate{frametitle}[default][center]
+  \beamertemplatenavigationsymbolsempty % Remove Nav Bar
+  \setbeamertemplate{footline}[frame number] % Add page number in footer
+  \setbeamercolor{title}{fg=black}
+  \setbeamercolor{frametitle}{fg=black}
+}
+\usepackage{graphicx}					% For including figures
+\usepackage{booktabs}					% For table rules
+\usepackage{hyperref}					% For cross-referencing
+
+\title{\hspace{0.2in}LEGEND-T2DM: Emerging Best Practices}	% Presentation title
+\author{Fan Bu and Aki Nishimura}								% Presentation author
+\institute{on behalf of the LEGEND initiative}					% Author affiliation
+\date{October 2021}	
+
+\begin{document}
+
+% Title page
+% This page includes the informations defined earlier including title, author/s, affiliation/s and the date
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_title_background.jpg}}%
+\begin{frame}
+  \titlepage
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
+\begin{frame}{LEGEND-T2DM Methods Outline}
+  outline here
+\end{frame}
+}
+
+
+
+\end{document}
