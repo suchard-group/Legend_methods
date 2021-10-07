@@ -10,6 +10,7 @@
 \usepackage{amssymb}
 \usepackage{bbm}
 \usepackage{appendixnumberbeamer}
+\usepackage[export]{adjustbox}
 
 \newcommand{\Ell}{\mathcal{L}}
 \newcommand{\mb}{\mathbf}
@@ -62,8 +63,40 @@ Limitations and challenges:
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
 \begin{frame}{Causal survival problems}
+	\hspace*{.03\linewidth}
+	\begin{minipage}{.7\linewidth}
+	\includegraphics[width=\linewidth]{figures/positive_control_experiments_1_percent_outcome}
+	\includegraphics[width=\linewidth]{figures/positive_control_experiments_10_percent_outcome}
+	\end{minipage}
+	\nobreak\hspace{.15em}
+	\begin{minipage}{.24\linewidth}
+	Non-linearity / \\ non-collapsibility of Cox model causes \emph{bias} toward null.
+	
+	\pause
+	\vspace*{\baselineskip}
+	But only in case of sufficiently large\\ hazard ratio and/or high outcome prevalence.
+	\end{minipage}
+\end{frame}
+}
 
-
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
+\begin{frame}{Causal survival problems}
+	\begin{minipage}{\linewidth}
+	\vspace*{.07\paperheight}
+	\includegraphics[width=0.6\linewidth]{figures/gail_et_al_1984}
+	\end{minipage}
+	\begin{minipage}{\linewidth}
+	\raggedleft
+	\vspace*{-.15\paperheight}
+	\includegraphics[width=0.45\linewidth]{figures/martinussen_vansteelandt_2013}
+	\end{minipage}
+	\pause
+	\begin{minipage}{\linewidth}
+	\centering
+	\vspace*{-.6\paperheight}
+	\includegraphics[width=0.55\linewidth, frame]{figures/austin_stuart_2015}
+	\end{minipage}
 \end{frame}
 }
 
