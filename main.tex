@@ -69,8 +69,79 @@ Limitations and challenges:
 
 {
 \usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
-\begin{frame}{Evidence synthesis}
+\begin{frame}{Evidence synthesis: traditional method}
+\begin{columns}
+\begin{column}{0.35\textwidth}
+\begin{itemize}
+    \item Each site produces point estimate for effect size
+    \item Use meta analysis (e.g., random effect model) to combine estimates
+    \item End result is an overall estimate
+\end{itemize}
 
+\end{column}
+\begin{column}{0.65\textwidth}
+\begin{figure}
+    \centering
+    \hspace*{-0.15in}
+    \includegraphics[trim = 0.5in 1in 0.5in 1.2in, clip, width=1.2\textwidth,page=1]{figures/Legend_hightlight_method_graphs.pdf}
+    %\caption{Caption}
+    %\label{fig:my_label}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+}
+
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
+\begin{frame}{Evidence synthesis: emerging alternative}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+    \item Instead...
+    \item Each site produces a likelihood
+    \item Likelihood: profile of full evidence
+    \item Use Bayesian or numerical methods to "combine" likelihoods
+    \item End result is an overall likelihood profile
+\end{itemize}
+
+\end{column}
+\begin{column}{0.6\textwidth}
+
+\begin{figure}
+    \centering
+    \hspace*{-0.23in}
+    \includegraphics[trim = 0.5in 1in 0.5in 1.2in, clip, width=1.2\textwidth, page=2]{figures/Legend_hightlight_method_graphs.pdf}
+    %\caption{Caption}
+    %\label{fig:my_label}
+\end{figure}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+}
+
+{
+\usebackgroundtemplate{\includegraphics[width=\paperwidth]{figures/OHDSI_content_slide_template.jpg}}
+\begin{frame}{Challenges and emerging \& future work}
+\begin{itemize}
+    \item Small or zero counts (monotonous individual likelihoods)
+    \begin{itemize}
+        \item[-] need better likelihood approximations or better combination algorithms (e.g., Schuemie et al., 2021; Duan et al., 2020)
+    \end{itemize}
+    \item Systematic errors (common in observational data)
+    \begin{itemize}
+        \item[-] calibration using negative (\& positive) controls (e.g., Mulgrave et al., 2020) 
+    \end{itemize}
+    \item Community-level confounding
+    \begin{itemize}
+        \item[-] possible solution with mixture models or latent factor models 
+    \end{itemize}
+\end{itemize}
 
 \end{frame}
 }
